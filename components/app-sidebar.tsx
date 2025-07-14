@@ -1,4 +1,4 @@
-import { Calendar, Home, Inbox, Search, Settings } from "lucide-react"
+import { Calendar, Home, Shirt, Heart ,Search,List ,UserPen,CircleUserIcon,LogOut, Settings, ShirtIcon, User } from "lucide-react"
 
 import {
   Sidebar,
@@ -10,33 +10,39 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
 } from "@/components/ui/sidebar"
+import { signOut } from "next-auth/react"
 
 // Menu items.
 const items = [
   {
     title: "Home",
-    url: "#",
+    url: "/dashboard",
     icon: Home,
   },
   {
-    title: "Inbox",
-    url: "#",
-    icon: Inbox,
+    title: "Ai Outfits",
+    url: "/combinations",
+    icon: ShirtIcon,
   },
   {
-    title: "Calendar",
-    url: "#",
-    icon: Calendar,
+    title: "favourites",
+    url: "/favorites",
+    icon: Heart,
   },
   {
-    title: "Search",
-    url: "#",
-    icon: Search,
+    title: "wardrobe",
+    url: "/wardrobe",
+    icon: List,
   },
   {
-    title: "Settings",
-    url: "#",
-    icon: Settings,
+    title: "Account",
+    url: "/account",
+    icon: UserPen,
+  },
+  {
+    title: "Logout",
+    onClick: () => signOut({ callbackUrl: "/" }),
+    icon: LogOut,
   },
 ]
 

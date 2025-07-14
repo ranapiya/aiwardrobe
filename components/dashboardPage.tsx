@@ -16,6 +16,7 @@ export default function DashboardPage() {
       <div className="w-full flex items-center justify-between mb-6">
         <div className="relative w-10 h-10 sm:w-12 sm:h-12 rounded-full overflow-hidden ">
           <Image
+            
             src={session?.user?.image || "/default-avatar.png"}
             alt="User profile"
             fill
@@ -82,7 +83,7 @@ export default function DashboardPage() {
           icon={<User className="w-5 h-5 text-yellow-500" />}
           title="My Wardrobe"
           subtitle="Customize Avatar"
-          href='/upload'
+          href='/wardrobe'
         />
       </div>
 
