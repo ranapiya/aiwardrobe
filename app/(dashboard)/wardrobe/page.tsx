@@ -1,8 +1,6 @@
 "use client";
 import React from "react";
-import Image from "next/image";
 import { SidebarTrigger } from "@/components/ui/sidebar";
-import { ArrowRight } from "lucide-react";
 import HerosectionWardrobe from "@/components/HerosectionWardrobe";
 import Wardrobesection from "@/components/Wardrobesection";
 const page = () => {

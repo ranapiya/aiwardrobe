@@ -18,7 +18,7 @@ const Page = () => {
       addUser(); 
     }
 
-  }, [status, router]);
+  }, [status, router,session?.user?.email]);
 
 
   if (status === "loading")

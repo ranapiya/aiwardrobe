@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 "use client";
 
 import { signIn, useSession } from "next-auth/react";
@@ -7,7 +8,7 @@ import Image from "next/image";
 
 export default function SignUp() {
   const router = useRouter();
-  const { data: session, status } = useSession();
+  const { data: session,status } = useSession();
 
   // Redirect to dashboard if already signed in
   useEffect(() => {

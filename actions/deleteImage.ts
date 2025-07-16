@@ -1,8 +1,8 @@
 "use server";
 
-import { authOptions } from "@/app/api/auth/[...nextauth]/route";
+import { authOptions } from "@/lib/authOptions";
 import { db } from "@/db/drizzle";
-import { uploads, users } from "@/db/schema";
+import { uploads} from "@/db/schema";
 import { getServerSession } from "next-auth";
 import { eq } from "drizzle-orm";
 

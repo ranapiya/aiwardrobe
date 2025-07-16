@@ -29,7 +29,7 @@ const AccountPage = () => {
           <div className="rounded-xl border p-6 bg-white shadow-sm">
             <h2 className="text-xl font-semibold mb-4">Update Profile</h2>
             {/* Replace this with your actual profile update form */}
-            <p className="text-sm text-muted-foreground">Here you'll allow users to update their name, photo, bio, etc.</p>
+            <p className="text-sm text-muted-foreground">Here you will allow users to update their name, photo, bio, etc.</p>
           </div>
         </TabsContent>
 

@@ -1,18 +1,11 @@
-"use client"
+"use client";
 import {
-
-  Calendar,
   Home,
-  Shirt,
   Heart,
-  Search,
   List,
   UserPen,
-  CircleUserIcon,
   LogOut,
-  Settings,
   ShirtIcon,
-  User,
   Camera,
 } from "lucide-react";
 
