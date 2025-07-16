@@ -11,7 +11,7 @@ export default function DashboardPage() {
   const { data: session} = useSession();
   
   return (
-    <div className="min-h-screen w-full bg-gradient-to-br from-[#fff8f9] via-[#f6f0ff] to-[#e9f6fb] px-6 sm:px-10 py-6 overflow-hidden text-gray-800">
+    <div className="min-h-screen w-full bg-gradient-to-br from-[#fff8f9] via-[#f6f0ff] to-[#e9f6fb] px-6 sm:px-10 py-6 overflow-hidden text-gray-800 lg:px-28">
       {/* Top Bar */}
       <div className="w-full flex items-center justify-between mb-6">
         <div className="relative w-10 h-10 sm:w-12 sm:h-12 rounded-full overflow-hidden ">
@@ -57,7 +57,7 @@ export default function DashboardPage() {
       
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
         <Card
-          image="/fashion2.jpg"
+          image="/fashion4.jpg"
           icon={<Upload className="w-5 h-5 text-blue-500" />}
           title="Upload Outfit"
           subtitle="31 Clothes Uploaded"
@@ -72,7 +72,7 @@ export default function DashboardPage() {
           href='/upload'
         />
         <Card
-          image="/fashion.jpg"
+          image="/fashion3.jpg"
           icon={<Bookmark className="w-5 h-5 text-pink-500" />}
           title="Favourites"
           subtitle="104 Items Saved"

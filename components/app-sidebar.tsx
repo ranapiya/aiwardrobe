@@ -1,4 +1,20 @@
-import { Calendar, Home, Shirt, Heart ,Search,List ,UserPen,CircleUserIcon,LogOut, Settings, ShirtIcon, User } from "lucide-react"
+"use client"
+import {
+
+  Calendar,
+  Home,
+  Shirt,
+  Heart,
+  Search,
+  List,
+  UserPen,
+  CircleUserIcon,
+  LogOut,
+  Settings,
+  ShirtIcon,
+  User,
+  Camera,
+} from "lucide-react";
 
 import {
   Sidebar,
@@ -9,8 +25,8 @@ import {
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
-} from "@/components/ui/sidebar"
-import { signOut } from "next-auth/react"
+} from "@/components/ui/sidebar";
+import { signOut } from "next-auth/react";
 
 // Menu items.
 const items = [
@@ -23,6 +39,11 @@ const items = [
     title: "Ai Outfits",
     url: "/combinations",
     icon: ShirtIcon,
+  },
+  {
+    title: "Upload",
+    url: "/upload",
+    icon: Camera,
   },
   {
     title: "favourites",
@@ -39,16 +60,17 @@ const items = [
     url: "/account",
     icon: UserPen,
   },
+
   {
     title: "Logout",
     onClick: () => signOut({ callbackUrl: "/" }),
     icon: LogOut,
   },
-]
+];
 
 export function AppSidebar() {
   return (
-    <Sidebar >
+    <Sidebar>
       <SidebarContent>
         <SidebarGroup>
           <SidebarGroupLabel>Application</SidebarGroupLabel>
@@ -56,11 +78,21 @@ export function AppSidebar() {
             <SidebarMenu>
               {items.map((item) => (
                 <SidebarMenuItem key={item.title}>
-                  <SidebarMenuButton asChild>
-                    <a href={item.url}>
-                      <item.icon />
-                      <span>{item.title}</span>
-                    </a>
+                  <SidebarMenuButton
+                    asChild={!item.onClick}
+                    onClick={item.onClick}
+                  >
+                    {item.onClick ? (
+                      <div className="flex items-center gap-2 cursor-pointer">
+                        <item.icon />
+                        <span>{item.title}</span>
+                      </div>
+                    ) : (
+                      <a href={item.url}>
+                        <item.icon />
+                        <span>{item.title}</span>
+                      </a>
+                    )}
                   </SidebarMenuButton>
                 </SidebarMenuItem>
               ))}
@@ -69,5 +101,5 @@ export function AppSidebar() {
         </SidebarGroup>
       </SidebarContent>
     </Sidebar>
-  )
+  );
 }

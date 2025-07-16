@@ -9,19 +9,17 @@ const Page = () => {
   const { data: session, status } = useSession();
   const router = useRouter();
 
-  // Redirect to signup if unauthenticated
+
   useEffect(() => {
     if (status === "unauthenticated") {
       router.push("/signup");
     }
-  }, [status, router]);
-
-
-  useEffect(() => {
     if (status === "authenticated" && session?.user?.email) {
       addUser(); 
     }
-  }, [status, session]);
+
+  }, [status, router]);
+
 
   if (status === "loading")
     return <div className="text-center mt-10 text-gray-600">Loading...</div>;

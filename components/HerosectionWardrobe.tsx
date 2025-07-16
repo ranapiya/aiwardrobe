@@ -5,7 +5,7 @@ import { ArrowRight } from "lucide-react";
 
 const HerosectionWardrobe = () => {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-tr from-[#ffe1ec] via-[#e9e4f0] to-[#d8f8f6] rounded-3xl shadow-lg px-6 py-8 sm:px-10 sm:py-10 mb-6">
+    <section className="relative overflow-hidden bg-gradient-to-tr from-[#ffe1ec] via-[#e9e4f0] to-[#d8f8f6] rounded-3xl shadow-lg px-6 py-8 sm:px-10 sm:py-10 mb-6 lg:px-32">
       <div className="relative z-10 flex flex-col-reverse sm:flex-row items-center justify-between gap-4">
         {/* Text Content */}
         <div className="max-w-xl text-center sm:text-left">
@@ -23,7 +23,7 @@ const HerosectionWardrobe = () => {
         {/* Image */}
         <div className="relative  sm:w-52 sm:h-64 mb-6 sm:mb-0">
           <Image
-            src="/fashion2.jpg"
+            src="/fashion3.jpg"
             alt="AI Wardrobe"
             fill
             className="object-cover rounded-2xl border-4 border-white shadow-xl"

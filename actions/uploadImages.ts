@@ -7,6 +7,7 @@ import { authOptions } from "@/app/api/auth/[...nextauth]/route";
 import { eq } from "drizzle-orm";
 
 export async function saveImageUrlToDB(imageUrl: string) {
+  
   const session = await getServerSession(authOptions);
   if (!session?.user?.email || !imageUrl) return;
 

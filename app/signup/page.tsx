@@ -21,7 +21,7 @@ export default function SignUp() {
       <div className="bg-white/60 backdrop-blur-2xl border border-white/20 shadow-2xl rounded-3xl px-8 py-12 max-w-md w-full text-center space-y-6">
         
         <Image
-          src="/fashion-icon.png" //  logo
+          src="/bird_2.jpg" //  logo
           alt="AI Wardrobe"
           width={70}
           height={70}

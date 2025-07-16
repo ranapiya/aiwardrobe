@@ -12,7 +12,7 @@ export default function Home() {
         
         <div className="flex justify-center">
           <Image
-            src="/fashion-icon.png" 
+            src="/bird_2.jpg" 
             alt="AI Wardrobe"
             width={90}
             height={90}
