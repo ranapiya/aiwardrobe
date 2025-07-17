@@ -6,6 +6,12 @@ import { deleteImage } from "@/actions/deleteImage";
 import Image from "next/image";
 import { Button } from "./ui/button";
 import { MdDelete } from "react-icons/md";
+import { Input } from "@/components/ui/input"
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from "@/components/ui/popover"
 
 type ImageItem = {
   id: string;
@@ -38,7 +44,7 @@ const WardrobeSection = () => {
   }, []);
 
   return (
-    <div className="p-6">
+    <div className="p-2">
       <h2 className="text-2xl font-semibold mb-4">Your Uploaded Outfits</h2>
 
       {images.length === 0 ? (

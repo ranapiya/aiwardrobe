@@ -35,24 +35,40 @@ const Page = () => {
   };
 
   return (
-    <div className="min-h-screen flex justify-center items-center p-6">
-      <div className="w-full max-w-4xl flex flex-col items-center mx-auto min-h-96 border border-dashed bg-white dark:bg-black border-neutral-200 dark:border-neutral-800 rounded-lg">
-        <FileUpload onChange={handleFileUpload} />
+    <main className="min-h-screen flex items-center justify-center px-4 py-10 bg-gradient-to-br from-pink-200 via-purple-200 to-cyan-200">
+      <div className="w-full max-w-3xl p-8 rounded-2xl shadow-xl bg-white dark:bg-zinc-900 border border-dashed border-neutral-300 dark:border-neutral-800 transition-all">
+        <h1 className="text-2xl sm:text-3xl font-semibold text-center mb-8 text-zinc-800 dark:text-zinc-100">
+          Upload Your Outfit
+        </h1>
 
-        {uploading && <Button>Uploading...</Button>}
+        <div className="flex flex-col items-center justify-center gap-6">
+          <FileUpload onChange={handleFileUpload} />
 
-        {!uploading && uploaded && (
-          <div className="flex flex-col gap-y-4">
-            <Button className="bg-emerald-600">Uploaded ✅</Button>
-            <p>Go to your wardrobe</p>
-            <Button className="bg-cyan-600 text-white">
-              <Link href="/wardrobe">Wardrobe ➡️</Link>
+          {uploading && (
+            <Button className="w-full max-w-sm bg-yellow-500 text-white hover:bg-yellow-600">
+              Uploading...
             </Button>
-          </div>
-        )}
+          )}
+
+          {!uploading && uploaded && (
+            <div className="w-full max-w-sm flex flex-col gap-4 items-center mt-4">
+              <Button className="w-full bg-emerald-600 text-white hover:bg-emerald-700">
+                Uploaded ✅
+              </Button>
+              <p className="text-zinc-600 dark:text-zinc-300 text-sm">
+                Head over to your wardrobe to view your outfit
+              </p>
+              <Link href="/wardrobe" passHref>
+                <Button className="w-full bg-cyan-600 text-white hover:bg-cyan-700">
+                  Go to Wardrobe ➡️
+                </Button>
+              </Link>
+            </div>
+          )}
+        </div>
       </div>
-    </div>
+    </main>
   );
-};
+}
 
 export default Page;
